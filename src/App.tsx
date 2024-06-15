@@ -1,24 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
+import Menu from './components/Menu';
 import './App.css';
+import { Card, Container } from '@mui/material';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className="App"
+      style={{
+        backgroundColor: '#1f1f1f',
+        minHeight: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <main
+        className="App-main"
+        style={{ paddingTop: '2rem', paddingBottom: '2rem' }}
+      >
+        <Container maxWidth="xl">
+          <Card
+            style={{
+              backgroundColor: '#2b2b2b',
+              color: '#ffffff',
+              borderRadius: '12px',
+            }}
+          >
+            <div style={{ width: '100%', maxWidth: '1200px', margin: 'auto' }}>
+              <Menu />
+            </div>
+          </Card>
+        </Container>
+      </main>
     </div>
   );
 }
